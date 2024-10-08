@@ -325,6 +325,16 @@ class LuceneSearcher:
         """Check if Rocchio pseudo-relevance feedback is being performed."""
         return self.object.use_rocchio()
 
+    def set_qljm(self, _lambda=float(0.5)):
+        """Configure query likelihood with Jelinek-Mercer smoothing as the scoring function.
+
+        Parameters
+        ----------
+        _lambda : float
+            Jelinek-Mercer smoothing parameter lambda.
+        """
+        self.object.set_qljm(float(_lambda))
+
     def set_qld(self, mu=float(1000)):
         """Configure query likelihood with Dirichlet smoothing as the scoring function.
 
