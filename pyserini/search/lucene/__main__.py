@@ -222,13 +222,12 @@ if __name__ == "__main__":
     if args.qld:
         search_rankers.append('qld')
         searcher.set_qld()
-    elif args.bm25:
-        search_rankers.append('bm25')
-        set_bm25_parameters(searcher, args.index, args.k1, args.b)
     elif args.qljm:
         search_rankers.append('qljm')
         searcher.set_qljm()
-
+    elif args.bm25:
+        search_rankers.append('bm25')
+        set_bm25_parameters(searcher, args.index, args.k1, args.b)
 
     if args.rm3:
         search_rankers.append('rm3')
