@@ -325,6 +325,11 @@ class LuceneSearcher:
         """Check if Rocchio pseudo-relevance feedback is being performed."""
         return self.object.use_rocchio()
 
+    def set_tfidf(self):
+        """Configure tfidf as the scoring function.
+        """
+        self.object.set_tfidf()
+
     def set_qljm(self, _lambda=float(0.5)):
         """Configure query likelihood with Jelinek-Mercer smoothing as the scoring function.
 
